@@ -245,11 +245,12 @@ Returns all the spots.
 
 - Require Authentication: false
 - Request
-  <!-- Question for Alex -Can we change spots to locations??- -->
 
-  - Method: GET
-  - Route path: /spots
-  - Body: none
+QUESTION FOR ALEX - CAN WE CHANGE SPOTS TO LOCATIONS??
+
+- Method: GET
+- Route path: /spots
+- Body: none
 
 - Successful Response
 
@@ -288,10 +289,11 @@ Returns all the spots owned (created) by the current user.
 
 - Require Authentication: true
 - Request
-<!-- CHANGE -->
-  <!-- /user/:userId/spots 
-    If you disagree with this then we can ignore it
-  -->
+  <!-- CHANGE -->
+    <!-- /user/:userId/spots 
+      If you disagree with this then we can ignore it
+    -->
+
   - Method: GET
   - Route path: /spots/:userId
   - Body: none
@@ -333,8 +335,9 @@ Returns the details of a spot specified by its id.
 
 - Require Authentication: false
 - Request
-<!-- CHANGE -->
-<!-- Add /spot/:spotId-->
+  <!-- CHANGE -->
+  <!-- Add /spot/:spotId-->
+
   - Method: GET
   - Route path: /spot/:id
   - Body: none
@@ -481,8 +484,8 @@ Create and return a new image for a spot specified by id.
 - Request
 
   - Method: POST
-  <!-- CHANGE -->
-  <!-- /spot/:spotId/img -->
+    <!-- CHANGE -->
+    <!-- /spot/:spotId/img -->
   - Route path: /spot/:id/img
   - Headers:
     - Content-Type: application/json
@@ -1033,6 +1036,7 @@ Return all the bookings that the current user has made.
       - Route path: user/:userId/bookings/
       If you disagree then we can ignore this change
     -->
+
   - Method: GET
   - Route path: /bookings/:userId
   - Body: none
@@ -1343,6 +1347,7 @@ Delete an existing booking.
     <!-- 
       - Route path: /user/bookings/:bookingId
     -->
+
   - Method: DELETE
   - Route path: /user/:bookingId
   - Body: none
