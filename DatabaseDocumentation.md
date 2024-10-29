@@ -60,7 +60,7 @@ Returns the information about the current user that is logged in.
 
   - Status Code: 200
   - Headers:
-    - Content-Type: application/jso
+    - Content-Type: application/json
   - Body:
 
     ```json
