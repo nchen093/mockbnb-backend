@@ -404,7 +404,7 @@ Creates and returns a new spot.
 - Request
 
   - Method: POST
-  - Route path: /create-spot
+  - Route path: /spot/:spotId
   - Headers:
     - Content-Type: application/json
   - Body:
