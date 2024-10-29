@@ -858,6 +858,10 @@ Create and return a new image for a review specified by id.
 - Require proper authorization: Review must belong to the current user
 - Request
 
+<!--FIXED--->
+
+<!-- They are the same as that I put it before, did I miss anything here that I need to change?--->
+
 - Method: PUT
 - Route path: /spot/:spotId/review/img
 - Headers:
@@ -922,17 +926,17 @@ Update and return an existing review.
   - Method: PATCH
       <!-- FIXED -->
 
-  - Route path: /spot/:reviewId
-  - Headers:
-    - Content-Type: application/json
-  - Body:
+- Route path: /spot/:reviewId
+- Headers:
+  - Content-Type: application/json
+- Body:
 
-    ```json
-    {
-      "review": "This was an awesome spot!",
-      "stars": 5
-    }
-    ```
+  ```json
+  {
+    "review": "This was an awesome spot!",
+    "stars": 5
+  }
+  ```
 
 - Successful Response
 
