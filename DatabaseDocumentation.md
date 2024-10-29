@@ -289,7 +289,6 @@ Returns all the spots owned (created) by the current user.
 
 - Require Authentication: true
 - Request
-  <!-- FIXED -->
 
   - Method: GET
   - Route path: /user/:userId/spots
@@ -332,7 +331,6 @@ Returns the details of a spot specified by its id.
 
 - Require Authentication: false
 - Request
-  <!-- FIXED -->
 
   - Method: GET
   - Route path: /spot/:spotId
@@ -480,7 +478,6 @@ Create and return a new image for a spot specified by id.
 - Request
 
   - Method: POST
-    <!-- FIXED -->
 
   - Route path: /spot/:spotId/img
   - Headers:
@@ -1334,7 +1331,6 @@ Delete an existing booking.
 - Require proper authorization: Booking must belong to the current user or the
   Spot must belong to the current user
 - Request
-  <!--FIXED-->
 
   - Method: DELETE
   - Route path: /user/bookings/:bookingId
@@ -1388,7 +1384,6 @@ Delete an existing image for a Spot.
 - Require Authentication: true
 - Require proper authorization: Spot must belong to the current user
 - Request
-  <!-- FIXED -->
 
   - Method: DELETE
   - Route path: /spot/:spotId/img
@@ -1427,8 +1422,6 @@ Delete an existing image for a Review.
 - Require Authentication: true
 - Require proper authorization: Review must belong to the current user
 - Request
-
-  <!-- FIXED -->
 
 - Method: DELETE
 - Route path: /review/:reviewId/img
