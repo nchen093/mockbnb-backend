@@ -289,13 +289,10 @@ Returns all the spots owned (created) by the current user.
 
 - Require Authentication: true
 - Request
-  <!-- CHANGE -->
-    <!-- /user/:userId/spots 
-      If you disagree with this then we can ignore it
-    -->
+  <!-- FIXED -->
 
   - Method: GET
-  - Route path: /spots/:userId
+  - Route path: /user/:userId/spots
   - Body: none
 
 - Successful Response
@@ -335,11 +332,10 @@ Returns the details of a spot specified by its id.
 
 - Require Authentication: false
 - Request
-  <!-- CHANGE -->
-  <!-- Add /spot/:spotId-->
+  <!-- FIXED -->
 
   - Method: GET
-  - Route path: /spot/:id
+  - Route path: /spot/:spotId
   - Body: none
 
 - Successful Response
@@ -484,9 +480,9 @@ Create and return a new image for a spot specified by id.
 - Request
 
   - Method: POST
-    <!-- CHANGE -->
-    <!-- /spot/:spotId/img -->
-  - Route path: /spot/:id/img
+    <!-- FIXED -->
+
+  - Route path: /spot/:spotId/img
   - Headers:
     - Content-Type: application/json
   - Body:
@@ -1031,14 +1027,9 @@ Return all the bookings that the current user has made.
 
 - Require Authentication: true
 - Request
-  <!-- CHANGE -->
-    <!-- 
-      - Route path: user/:userId/bookings/
-      If you disagree then we can ignore this change
-    -->
 
   - Method: GET
-  - Route path: /bookings/:userId
+  - Route path: user/:userId/bookings/
   - Body: none
 
 - Successful Response
@@ -1343,13 +1334,10 @@ Delete an existing booking.
 - Require proper authorization: Booking must belong to the current user or the
   Spot must belong to the current user
 - Request
-  <!-- CHANGE -->
-    <!-- 
-      - Route path: /user/bookings/:bookingId
-    -->
+  <!--FIXED-->
 
   - Method: DELETE
-  - Route path: /user/:bookingId
+  - Route path: /user/bookings/:bookingId
   - Body: none
 
 - Successful Response
@@ -1400,13 +1388,10 @@ Delete an existing image for a Spot.
 - Require Authentication: true
 - Require proper authorization: Spot must belong to the current user
 - Request
-  <!-- CHANGE -->
-    <!-- 
-      - Route path: /spot/:spotId/img
-    -->
+  <!-- FIXED -->
 
   - Method: DELETE
-  - Route path: /:spotId/img
+  - Route path: /spot/:spotId/img
   - Body: none
 
 - Successful Response
@@ -1443,13 +1428,10 @@ Delete an existing image for a Review.
 - Require proper authorization: Review must belong to the current user
 - Request
 
-  <!-- CHANGE -->
-    <!-- 
-      - Route path: /review/:reviewId/img
-    -->
+  <!-- FIXED -->
 
 - Method: DELETE
-- Route path: /:reviewId/img
+- Route path: /review/:reviewId/img
 - Body: none
 
 - Successful Response
