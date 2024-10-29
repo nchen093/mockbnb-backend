@@ -401,7 +401,7 @@ Creates and returns a new spot.
 - Request
 
   - Method: POST
-  - Route path: /spot
+  - Route path: /spots
   - Headers:
     - Content-Type: application/json
   - Body:
@@ -479,7 +479,7 @@ Create and return a new image for a spot specified by id.
 
   - Method: POST
 
-  - Route path: /spot/:spotId/img
+  - Route path: /spot/:spotId/image
   - Headers:
     - Content-Type: application/json
   - Body:
@@ -856,7 +856,7 @@ Create and return a new image for a review specified by id.
 - Request
 
 - Method: PUT
-- Route path: /reviews/:reviewId/img
+- Route path: /reviews/:reviewId/image
 - Headers:
   - Content-Type: application/json
 - Body:
@@ -1386,7 +1386,7 @@ Delete an existing image for a Spot.
 - Request
 
   - Method: DELETE
-  - Route path: /spot/:spotId/img/:imgId
+  - Route path: /spot/:spotId/image/:imageId
   - Body: none
 
 - Successful Response
@@ -1424,7 +1424,7 @@ Delete an existing image for a Review.
 - Request
 
 - Method: DELETE
-- Route path: /review/:reviewId/img/:imgId
+- Route path: /review/:reviewId/image/:imageId
 - Body: none
 
 - Successful Response
