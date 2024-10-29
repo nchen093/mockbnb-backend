@@ -2,7 +2,7 @@
 
 ## Database Schema Design
 
-<img src="./Mock-bnb-schema.png>
+![Database Schema](./Mock-bnb-schema.png)
 
 ## API Documentation
 
@@ -288,7 +288,10 @@ Returns all the spots owned (created) by the current user.
 
 - Require Authentication: true
 - Request
-
+<!-- CHANGE -->
+  <!-- /user/:userId/spots 
+    If you disagree with this then we can ignore it
+  -->
   - Method: GET
   - Route path: /spots/:userId
   - Body: none
@@ -330,7 +333,8 @@ Returns the details of a spot specified by its id.
 
 - Require Authentication: false
 - Request
-
+<!-- CHANGE -->
+<!-- Add /spot/:spotId-->
   - Method: GET
   - Route path: /spot/:id
   - Body: none
@@ -400,7 +404,6 @@ Creates and returns a new spot.
 - Request
 
   - Method: POST
-    <!-- fixed -->
   - Route path: /create-spot
   - Headers:
     - Content-Type: application/json
@@ -478,6 +481,8 @@ Create and return a new image for a spot specified by id.
 - Request
 
   - Method: POST
+  <!-- CHANGE -->
+  <!-- /spot/:spotId/img -->
   - Route path: /spot/:id/img
   - Headers:
     - Content-Type: application/json
@@ -527,8 +532,6 @@ Updates and returns an existing spot.
 - Request
 
   - Method: PATCH
-    <!-- FIXED -->
-
   - Route path: /spot/:spotId
   - Headers:
     - Content-Type: application/json
@@ -619,8 +622,6 @@ Deletes an existing spot.
 - Request
 
   - Method: DELETE
-      <!-- FIXED -->
-
   - Route path: /spot/:spotId
   - Body: none
 
@@ -858,10 +859,6 @@ Create and return a new image for a review specified by id.
 - Require proper authorization: Review must belong to the current user
 - Request
 
-<!--FIXED--->
-
-<!-- They are the same as that I put it before, did I miss anything here that I need to change?--->
-
 - Method: PUT
 - Route path: /spot/:spotId/review/img
 - Headers:
@@ -923,9 +920,7 @@ Update and return an existing review.
 - Require proper authorization: Review must belong to the current user
 - Request
 
-  - Method: PATCH
-      <!-- FIXED -->
-
+- Method: PATCH
 - Route path: /spot/:reviewId
 - Headers:
   - Content-Type: application/json
@@ -996,8 +991,6 @@ Delete an existing review.
 - Request
 
   - Method: DELETE
-      <!-- FIXED -->
-
   - Route path: /spot/:reviewId
   - Body: none
 
@@ -1035,10 +1028,12 @@ Return all the bookings that the current user has made.
 
 - Require Authentication: true
 - Request
-
+  <!-- CHANGE -->
+    <!-- 
+      - Route path: user/:userId/bookings/
+      If you disagree then we can ignore this change
+    -->
   - Method: GET
-    <!-- FIXED -->
-
   - Route path: /bookings/:userId
   - Body: none
 
@@ -1245,7 +1240,7 @@ Update and return an existing booking.
 - Request
 
   - Method: PATCH
-  - Route path: /user/booking/:bookingId
+  - Route path: /user/bookings/:bookingId
   - Headers:
     - Content-Type: application/json
   - Body:
@@ -1344,10 +1339,11 @@ Delete an existing booking.
 - Require proper authorization: Booking must belong to the current user or the
   Spot must belong to the current user
 - Request
-
+  <!-- CHANGE -->
+    <!-- 
+      - Route path: /user/bookings/:bookingId
+    -->
   - Method: DELETE
-      <!-- FIXED -->
-
   - Route path: /user/:bookingId
   - Body: none
 
@@ -1399,9 +1395,9 @@ Delete an existing image for a Spot.
 - Require Authentication: true
 - Require proper authorization: Spot must belong to the current user
 - Request
-  <!-- FIXED -->
+  <!-- CHANGE -->
     <!-- 
-      - Route path: spot/spot:id/img
+      - Route path: /spot/:spotId/img
     -->
 
   - Method: DELETE
@@ -1442,14 +1438,13 @@ Delete an existing image for a Review.
 - Require proper authorization: Review must belong to the current user
 - Request
 
-<!-- FIXED -->
-  <!-- 
-    I don't know if we need the user path but we'll need the review:id
-    - Route path: /review:id/img
-  -->
+  <!-- CHANGE -->
+    <!-- 
+      - Route path: /review/:reviewId/img
+    -->
 
 - Method: DELETE
-- Route path: /:reviewid/img
+- Route path: /:reviewId/img
 - Body: none
 
 - Successful Response
